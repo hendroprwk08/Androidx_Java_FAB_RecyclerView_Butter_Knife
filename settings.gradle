@@ -1,0 +1,2 @@
+rootProject.name='Androidx_Java_FAB_RecyclerView'
+include ':app'

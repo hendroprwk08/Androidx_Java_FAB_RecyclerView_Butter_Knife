@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".DetailActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama"/>
+
+    <EditText
+        android:id="@+id/et_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kelas"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rg_kelas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb_IK"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Inf. Komputer"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb_TI"
+                android:layout_weight="1"
+                android:text="Tek. Komputer"/>
+
+        </RadioGroup>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Minat"
+        android:layout_marginTop="10dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <CheckBox
+                android:id="@+id/cb_teknologi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teknologi"
+                android:layout_column="1"/>
+
+            <CheckBox
+                android:id="@+id/cb_kuliner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kuliner"
+                android:layout_column="2"
+                android:layout_marginLeft="15dp"/>
+
+            <CheckBox
+                android:id="@+id/cb_ekonomi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ekonomi"
+                android:layout_column="3"
+                android:layout_marginLeft="15dp"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <CheckBox
+                android:id="@+id/cb_keuangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Keuangan"
+                android:layout_column="1"/>
+
+            <CheckBox
+                android:id="@+id/cb_arsitektur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Arsitektur"
+                android:layout_column="2"
+                android:layout_marginLeft="15dp"/>
+
+            <CheckBox
+                android:id="@+id/cb_lain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lainnya"
+                android:checked="true"
+                android:layout_column="2"
+                android:layout_marginLeft="15dp"/>
+
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status karir"
+        android:layout_marginTop="10dp"/>
+
+    <Spinner
+        android:id="@+id/sp_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/status_bekerja">
+    </Spinner>
+
+</LinearLayout>
