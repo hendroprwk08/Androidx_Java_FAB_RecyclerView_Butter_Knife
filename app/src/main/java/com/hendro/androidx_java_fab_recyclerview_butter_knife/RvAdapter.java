@@ -108,7 +108,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.CardViewHolder> {
                             .setNeutralButton("Tutup", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss(); //tutup
+                                    dialog.dismiss(); //tutup dialog
                                 }
                             })
                             .show();

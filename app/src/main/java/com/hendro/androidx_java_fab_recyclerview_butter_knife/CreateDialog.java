@@ -56,7 +56,7 @@ public class CreateDialog extends DialogFragment {
                     RadioButton mrb_kelas;
 
                     String nama, kelas, status;
-                    boolean kesehatan, ekonomi, teknologi,
+                    boolean ekonomi, teknologi,
                             arsitektur, kuliner, keuangan, lain;
 
                     //pilih radio button yang ada di radio button group
@@ -76,7 +76,6 @@ public class CreateDialog extends DialogFragment {
 
                     status = msp_status.getSelectedItem().toString();
 
-                    //new MainActivity().anggotaArrayList.add( //panggil dari MainActivity
                     anggotaArrayList.add(
                         new Anggota(nama, kelas, status, teknologi,
                             lain, kuliner,
