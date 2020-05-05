@@ -67,8 +67,6 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.CardViewHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //simpan array list yang ada pada MainActivity
-                //new MainActivity().saveArrayList(context, anggotaArrayList, "list_anggota");
 
                 Bundle b = new Bundle();
                 b.putString("b_nama", nama);
@@ -93,8 +91,18 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.CardViewHolder> {
                             .setNegativeButton("Hapus", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    anggotaArrayList.remove(position); //hapus baris anggota list
-                                    notifyItemRemoved(position); //refresh anggota list
+                                    try {
+                                        if ( anggotaArrayList.size() == 1 ){
+                                            anggotaArrayList.clear(); //kosongkan array list
+                                            notifyDataSetChanged(); //refresh anggota list ( tanpa animasinya )
+                                        }else{
+                                            anggotaArrayList.remove(position); //hapus baris anggota list
+                                            notifyItemRemoved(position); //refresh anggota list ( ada animasinya )
+                                        }
+
+                                    } catch (Exception e) {
+                                        Log.i("Error:", e.getMessage());
+                                    }
                                 }
                             })
                             .setPositiveButton("Lihat", new DialogInterface.OnClickListener() {

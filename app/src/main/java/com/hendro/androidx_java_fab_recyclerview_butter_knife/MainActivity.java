@@ -86,12 +86,13 @@ public class MainActivity extends AppCompatActivity {
         String json = prefs.getString("sp_list_anggota", null);
         Type type = new TypeToken<ArrayList<Anggota>>() {}.getType();
 
-        anggotaArrayList =  gson.fromJson(json, type);
+        if (  json != null ) {
+            anggotaArrayList = gson.fromJson(json, type);
 
-        if ( anggotaArrayList.size() > 0 )
-            viewRecyclerView(rv, anggotaArrayList);
+            if (anggotaArrayList.size() > 0)
+                viewRecyclerView(rv, anggotaArrayList);
 
+        }
     }
-
 
 }
